@@ -14,10 +14,6 @@
       <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
         <form class="space-y-6" @submit.prevent="register">
           <div>
-            {{ errors }}
-          </div>
-
-          <div>
             <label class="block text-sm font-medium text-gray-700">Username/Handle</label>
             <div class="mt-1">
               <input
