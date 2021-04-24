@@ -13,14 +13,9 @@
     <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
       <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
         <form class="space-y-6" @submit.prevent="register">
-          <v-input-field v-model="name"
-                         :messages="['Messages']"
-                         append-icon="mdi-close"
-                         prepend-icon="mdi-phone"
-          >
-            name
-          </v-input-field>
-
+          <div>
+            {{ errors }}
+          </div>
 
           <div>
             <label class="block text-sm font-medium text-gray-700">Username/Handle</label>
