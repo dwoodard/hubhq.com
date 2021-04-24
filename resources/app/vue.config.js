@@ -1,6 +1,6 @@
 module.exports = {
   // local Laravel server address for api proxy
-  devServer: { proxy: 'http://127.0.0.1:8000' },
+  devServer: { proxy: 'http://127.0.0.1' },
 
   // outputDir should be Laravel public dir
   outputDir: '../../public/',
@@ -12,5 +12,8 @@ module.exports = {
           : 'index.html',
 
   runtimeCompiler: true,
-  productionSourceMap: false
+
+  css: {
+    sourceMap: true
+  }
 };

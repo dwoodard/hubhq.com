@@ -15,9 +15,9 @@
   },
   "scripts": {
     "watch": "npm-watch",
-    "docker": "cd laradock;docker-compose up -d nginx mysql phpmyadmin;cd ..;echo '';echo 'Website: http://localhost';echo 'Phpmyadmin: http://localhost:8081 root:root';echo 'Redis: http://localhost:9987 laradock:laradock'; npm run watch",
+    "docker": "cd laradock;docker-compose up -d nginx mysql phpmyadmin;cd ..;echo '';echo 'Website: http://localhost';echo 'Phpmyadmin: http://localhost:8081 root:root';echo 'Redis: http://localhost:9987 laradock:laradock'; npm run vueserver",
     "vueserver": "cd resources/app && npm run serve",
-    "vue": "cd resources/app && vue ui",
+    "vueGUI": "cd resources/app && vue ui",
     "build": "cd resources/app && npm run build"
   },
   "author": "",

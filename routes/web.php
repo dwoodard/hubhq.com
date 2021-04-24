@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::post('/register', [\App\Http\Controllers\Auth\RegisterController::class, 'store'])
+    ->middleware('guest');
 
 Route::any('/{any}', function () { return view('app'); })->where('any','^(?!api).*$');
 

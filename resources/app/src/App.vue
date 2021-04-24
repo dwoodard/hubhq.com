@@ -5,13 +5,10 @@
       style="height: 72px"
     >
       <div class="flex justify-between items-center">
-        <router-link to="/" class="mr-3">logo</router-link>
-
+        <router-link to="/" class="mr-3 text-2xl">HubHQ</router-link>
 
         <div id="nav">
-          <router-link to="/about">
-            About
-          </router-link>
+          <router-link to="/about">About</router-link>
         </div>
       </div>
       <NavMenu />
