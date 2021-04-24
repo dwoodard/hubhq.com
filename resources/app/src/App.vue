@@ -1,48 +1,32 @@
 <template>
-  <div class="">
-    <div
-      class="px-4 flex justify-between items-center shadow-md"
-      style="height: 72px"
-    >
-      <div class="flex justify-between items-center">
-        <router-link to="/" class="mr-3 text-2xl">HubHQ</router-link>
-
-        <div id="nav">
-          <router-link to="/about">About</router-link>
-        </div>
-      </div>
-      <NavMenu />
+  <div id="app">
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
     </div>
-
-    <div class="p-4">
-      <router-view />
-    </div>
-
-    <div id="modals" />
+    <router-view/>
   </div>
 </template>
 
-<script>
- import NavMenu from './components/NavMenu';
-
-export default {
-  components: { NavMenu
-  },
-};
-</script>
-<style>
-
-
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-}
-
-#nav a {
-  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
   color: #2c3e50;
 }
 
-#nav a.router-link-exact-active {
-  color: #b00000;
+#nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
 }
 </style>
