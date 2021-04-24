@@ -10,7 +10,6 @@ module.exports = {
     'plugin:vue/vue3-essential',
     'eslint:recommended',
     'plugin:vue/vue3-essential',
-    // '@vue/airbnb',
   ],
 
   parserOptions: {
@@ -22,6 +21,7 @@ module.exports = {
     'no-debugger': 'off',
     'vue/no-multiple-template-root': 'off',
     'vue/max-attributes-per-line': 'off',
-    'vue/singleline-html-element-content-newline': 'off'
+    'vue/singleline-html-element-content-newline': 'off',
+    'vue/require-default-prop': 'off',
   },
 };
