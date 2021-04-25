@@ -3,12 +3,8 @@
     <v-app-bar app color="white">
 
       <div class="flex align-self-center">
-        <router-link to="/" tag="span" class="mr-4 text-h5">
-          HubHQ
-        </router-link>
-        <router-link to="/about" tag="span" >
-          About
-        </router-link>
+        <v-btn to="/" tag="span" text class="mr-4 text-h5">HubHQ</v-btn>
+        <v-btn to="/about" tag="span" text >About</v-btn>
       </div>
 
       <div>
@@ -63,9 +59,36 @@
             <v-list-item-title>Title</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+
+        <v-list-item link>
+          <v-list-item-icon>
+            <v-icon>mdi-view-dashboard</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>Title</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
       </v-list>
 
       <v-divider></v-divider>
+
+      <div class="ma-4 ">
+        <v-btn
+            to="/login"
+            color="primary"
+            text
+            rounded
+            class="mr-2"
+        >Sign in</v-btn>
+
+        <v-btn
+            to="/register"
+            color="primary"
+
+            rounded
+        >Join Now</v-btn>
+      </div>
 
     </v-navigation-drawer>
 
