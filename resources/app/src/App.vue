@@ -1,9 +1,8 @@
 <template>
   <v-app>
     <v-app-bar app color="white">
-
       <div class="flex align-self-center">
-        <v-btn to="/" tag="span" text class="mr-4 text-h5">HubHQ</v-btn>
+        <v-btn to="/" text class="mr-4 text-h5" plain style="text-transform: unset">HubHQ</v-btn>
         <v-btn to="/about" tag="span" text >About</v-btn>
       </div>
 
@@ -13,16 +12,12 @@
     </v-app-bar>
 
     <v-main>
-      <v-container fluid>
-        <router-view></router-view>
-      </v-container>
+      <router-view></router-view>
     </v-main>
 
     <v-bottom-navigation
         fixed
-        :value="value"
-        color="primary"
-    >
+        class="">
 
       <v-btn>
         <span>Teams</span>
@@ -74,20 +69,8 @@
       <v-divider></v-divider>
 
       <div class="ma-4 ">
-        <v-btn
-            to="/login"
-            color="primary"
-            text
-            rounded
-            class="mr-2"
-        >Sign in</v-btn>
-
-        <v-btn
-            to="/register"
-            color="primary"
-
-            rounded
-        >Join Now</v-btn>
+        <v-chip to="/login" link outlined class="mr-2">Sign in</v-chip>
+        <v-chip to="/register" link>Join Now</v-chip>
       </div>
 
     </v-navigation-drawer>
