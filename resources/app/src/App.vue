@@ -1,32 +1,89 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <v-app-bar app color="white">
+
+      <div class="flex align-self-center">
+        <router-link to="/" tag="span" class="mr-4 text-h5">
+          HubHQ
+        </router-link>
+        <router-link to="/about" tag="span" >
+          About
+        </router-link>
+      </div>
+
+      <div>
+        <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+      </div>
+    </v-app-bar>
+
+    <v-main>
+      <v-container fluid>
+        <router-view></router-view>
+      </v-container>
+    </v-main>
+
+    <v-bottom-navigation
+        fixed
+        :value="value"
+        color="primary"
+    >
+
+      <v-btn>
+        <span>Teams</span>
+        <v-icon>mdi-account-group</v-icon>
+      </v-btn>
+
+      <v-btn>
+        <span>Nearby</span>
+
+        <v-icon>mdi-map-marker</v-icon>
+      </v-btn>
+    </v-bottom-navigation>
+
+    <v-navigation-drawer v-model="drawer" fixed right style="height: calc(100% - 64px);top:64px">
+
+      <v-list dense nav>
+
+        <v-list-item link>
+          <v-list-item-icon>
+            <v-icon>mdi-view-dashboard</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>Dashboard</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
+        <v-list-item link>
+          <v-list-item-icon>
+            <v-icon>mdi-view-dashboard</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>Title</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+
+      <v-divider></v-divider>
+
+    </v-navigation-drawer>
+
+  </v-app>
+
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
 
-#nav {
-  padding: 30px;
+export default {
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+  data: () => ({ drawer: null }),
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+};
+</script>
+<style>
+body .v-overlay {
+  height: calc(100% - 64px);
+  top: 64px;
 }
 </style>
