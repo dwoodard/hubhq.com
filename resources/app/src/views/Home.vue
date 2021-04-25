@@ -15,10 +15,13 @@
           </div>
         </v-col>
         <v-col cols="12" sm="12" md="6" >
-          <div class="white--text">
+          <v-card class="pa-10">
             <Login></Login>
-            <v-btn to="/register" block link color="green lighten-1 white--text">Create Account</v-btn>
-          </div>
+
+            <hr class="mb-10">
+
+            <v-btn to="/register" block link color="green darken-1 white--text">Create Account</v-btn>
+          </v-card>
         </v-col>
       </v-row>
     </div>

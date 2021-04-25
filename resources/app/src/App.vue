@@ -15,10 +15,7 @@
       <router-view></router-view>
     </v-main>
 
-    <v-bottom-navigation
-        fixed
-        class="">
-
+    <v-bottom-navigation fixed>
       <v-btn>
         <span>Teams</span>
         <v-icon>mdi-account-group</v-icon>
@@ -31,7 +28,7 @@
       </v-btn>
     </v-bottom-navigation>
 
-    <v-navigation-drawer v-model="drawer" fixed right style="height: calc(100% - 64px);top:64px">
+    <v-navigation-drawer v-model="drawer" temporary fixed right style="height: calc(100% - 64px);top:64px">
 
       <v-list dense nav>
 
