@@ -11,7 +11,3 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-/.idea
-/data
-/resources/app/node_modules/
-/resources/app/dist/
