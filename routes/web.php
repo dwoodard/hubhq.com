@@ -12,6 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::post('/login', [\App\Http\Controllers\Auth\RegisterController::class, 'login'])
+    ->middleware('guest');
+
 Route::post('/register', [\App\Http\Controllers\Auth\RegisterController::class, 'store'])
     ->middleware('guest');
 

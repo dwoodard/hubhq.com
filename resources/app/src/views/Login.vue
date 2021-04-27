@@ -4,15 +4,16 @@
       Sign in to your account
     </h2>
 
-    <form class="" action="#" method="POST">
+    <form class="" @submit.prevent="login">
       <v-text-field
-          v-model="name"
+          v-model="form.email"
           label="E-mail"
           required
       ></v-text-field>
 
       <v-text-field
-          v-model="password"
+          type="password"
+          v-model="form.password"
           label="Password"
           required
       ></v-text-field>
@@ -26,7 +27,37 @@
 </template>
 
 <script>
-export default {};
+import axios from 'axios';
+
+export default {
+  data() {
+    return {
+      form: {
+        email: '',
+        password: '',
+      },
+    };
+  },
+  methods: {
+    login() {
+      // move to main.js
+      axios.defaults.withCredentials = true;
+      axios.defaults.baseURL = 'http://localhost:8082';
+      // axios.defaults.baseURL = 'http://localhost';
+
+      axios.get('/sanctum/csrf-cookie').then(() => {
+        axios.post('/login', { ...this.form })
+          .then((res) => {
+            console.log(res);
+            this.$router.push('dashboard');
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      });
+    },
+  },
+};
 </script>
 
 <style scoped></style>

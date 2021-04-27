@@ -66,9 +66,7 @@ export default {
       password_confirmation: '',
     };
   },
-  computed: {
 
-  },
   methods: {
     register() {
       axios.post('register', {
